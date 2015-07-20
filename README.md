@@ -1,2 +1,2 @@
 # hyq_app
-ionic angular haoyouqian app
+好有钱的Ionic实现版本
