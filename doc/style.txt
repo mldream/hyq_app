@@ -1,0 +1,21 @@
+
+1.
+绝对不能在directive以外的地方操作dom元素，
+绝对不能在directive以外的地方操作dom元素，
+绝对不能在directive以外的地方操作dom元素，
+重要的事情说3遍。
+
+转变思维，利用AngularJs的数据绑定的特性，使用ng－show，ng－if来达到效果。
+
+2.
+关于表单的前端数据校验，使用ng-messages统一风格处理。
+
+3.
+http请求工具类的封装
+
+4.
+按照功能模块进行service的编写，提供该功能模块的数据接口方法。
+参数：object{}
+返回：Promise{return ResulData{};}
+
+5.
