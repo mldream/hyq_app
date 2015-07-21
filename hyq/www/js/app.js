@@ -56,8 +56,8 @@ angular.module('hyq', [
         url: '/feed',
         views: {
             'tab-feed': {
-                templateUrl: 'templates/tab-dash.html',
-                controller: 'DashCtrl'
+                templateUrl: 'templates/tab-feed.html',
+                controller: 'FeedCtrl'
             }
         }
     })
@@ -68,8 +68,8 @@ angular.module('hyq', [
         url: '/application',
         views: {
             'tab-application': {
-                templateUrl: 'templates/tab-chats.html',
-                controller: 'ChatsCtrl'
+                templateUrl: 'templates/tab-application.html',
+                controller: 'ApplicationCtrl'
             }
         }
     })
@@ -80,8 +80,8 @@ angular.module('hyq', [
         url: '/friend',
         views: {
             'tab-friend': {
-                templateUrl: 'templates/tab-chats.html',
-                controller: 'ChatsCtrl'
+                templateUrl: 'templates/tab-friend.html',
+                controller: 'FriendCtrl'
             }
         }
     })
@@ -92,8 +92,8 @@ angular.module('hyq', [
         url: '/user',
         views: {
             'tab-user': {
-                templateUrl: 'templates/tab-account.html',
-                controller: 'AccountCtrl'
+                templateUrl: 'templates/tab-user.html',
+                controller: 'UserCtrl'
             }
         }
     });
