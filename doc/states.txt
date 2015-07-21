@@ -1,0 +1,113 @@
+超模块	hyq
+
+四大模块
+	首页：hyq.feed
+	应用：hyq.application
+	朋友：hyq.friend
+	我的：hyq.user
+
+application子模块
+	应用首页		hyq.application
+	
+	<!-- 付款 -->
+	付款首页		hyq.application.pay
+	向手机付款		hyq.application.pay.toPhone
+	好友列表		hyq.application.pay.contacts
+	向联系人付款	hyq.application.pay.contacts.to
+	付款成功		hyq.application.pay.success
+	
+	<!-- 收款 -->
+	收款首页		hyq.application.receive
+	向手机收款		hyq.application.receive.fromPhone
+	好友列表		hyq.application.receive.contacts
+	向联系人收款	hyq.application.receive.contacts.from
+	收款成功		hyq.application.receive.success
+	
+	<!-- 提现 -->
+	提现首页		hyq.application.withdraw
+
+	<!-- 充值 -->
+	充值首页		hyq.application.recharge
+	
+	<!-- 手机充值 -->
+	手机充值首页	hyq.application.mobileCharge
+
+	<!-- 现金宝 -->
+	现金宝首页		hyq.application.xjBao
+
+	现金宝未开通首页hyq.application.xjBao.start
+	现金宝转入		hyq.application.xjBao.turnIn
+	现金宝转出		hyq.application.xjBao.turnOut
+	转入转出记录	hyq.applications.xjBap.records
+
+	<!-- 好友钱 -->
+	好友钱首页		hyq.application.friendMoney
+	放贷列表		hyq.application.friendMoney.lendRecord
+	放贷详情		hyq.application.friendMoney.lendRecord.detail
+	借款列表		hyq.application.friendMoney.borrowRecord
+	借款详情		hyq.application.friendMoney.borrowRecord.detail
+
+	<!-- 好友信用 -->
+	排行榜首页		hyq.application.credit
+
+	<!-- 钱说 -->
+	钱说首页		hyq.application.qianShuo
+
+friend子模块
+	朋友首页		hyq.friend
+
+	朋友个人主页	hyq.friend.zone
+	新的朋友		hyq.friend.request
+	添加新朋友		hyq.friend.search
+
+user子模块
+	我的首页		hyq.user
+
+	<!-- 我的个人信息 -->
+	个人信息首页	hyq.user.zone
+	学校设置		hyq.user.zone.school
+	工作单位设置	hyq.user.zone.company
+	昵称设置		hyq.user.zone.nikename
+	头像设置		hyq.user.zone.photo
+
+	<!-- 我的资产 -->
+	我的资产首页	hyq.user.asset
+
+	<!-- 我的通知 -->
+	通知首页		hyq.user.notice
+
+	<!-- 交易记录 -->
+	我的交易记录	hyq.user.transaction
+	交易记录详情	hyq.user.transaction.detail
+
+	<!-- 我的放贷 -->
+	我的放贷首页	hyq.user.lendRecords
+
+	<!-- 我的借款 -->
+	我的借款首页	hyq.user.borrowRecords
+
+	<!-- 我的银行卡 -->
+	我的银行卡首页	hyq.user.bankCards
+	添加银行卡		hyq.user.bankCards.addCard
+	添加银行卡第二步hyq.user.bankCards.addCard.stepTwo
+
+	<!-- 我的信用值 -->
+	我的信用值首页	hyq.user.credit
+	实名认证		hyq.user.credit.auth
+	上传身份证		hyq.user.credit.uploadIDCard
+	好友认证		hyq.user.credit.inviteFriend
+
+	<!-- 设置 -->
+	设置首页		hyq.user.setting
+
+	修改登录密码	hyq.user.setting.updateLoginPassword
+	修改支付密码	hyq.user.setting.updateTradePassword
+	二次验证		hyq.user.setting.2FA
+	小额免密		hyq.user.setting.freeValidate
+	自动还款		hyq.user.setting.autoRepay
+
+	关于我们		hyq.user.setting.aboutUs
+	意见反馈		hyq.user.setting.feedBack
+
+feed子模块
+	feed首页		hyq.feed
