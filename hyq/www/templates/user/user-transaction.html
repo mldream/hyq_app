@@ -1,0 +1,33 @@
+<ion-view view-title="交易记录">
+    <ion-content>
+
+        <ion-refresher pulling-text="下拉刷新"
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <ion-list>
+            <ion-item ng-repeat="item in transactions track by item.id"
+                      class="item-remove-animate item-avatar item-icon-right"
+                      type="item-text-wrap"
+                      auto-list-divider
+                      auto-list-divider-value="{{item.created_time}}"
+                      auto-list-divider_function="getDivider"
+                    >
+                <img ng-src="{{getImageUrl(item.user_picture)}}"/>
+                <h2 ng-bind="item.user_name"></h2>
+                <p ng-bind="item.created_time | date:'yyyy-MM-dd HH:mm:ss'"></p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="remove(item)">
+                    删除
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll
+                ng-if="canLoadMore"
+                on-infinite="loadMore()"
+                distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

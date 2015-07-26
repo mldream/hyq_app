@@ -1,0 +1,27 @@
+<ion-view view-title="朋友">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-icon-left item-icon-right">
+                <i class="icon ion-social-octocat"></i>
+                <h2>新的朋友</h2>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item ng-repeat="item in friends"
+                      class="item-remove-animate item-avatar item-icon-right"
+                      type="item-text-wrap"
+                      href="#/tab/chats/{{friend.id}}"
+                      auto-list-divider
+                      auto-list-divider-value="{{item.name}}"
+                    >
+                <img ng-src="{{item.face}}"/>
+                <h2 ng-bind="item.name"></h2>
+                <p ng-bind="item.lastText"></p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="remove(friend)">
+                    删除
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

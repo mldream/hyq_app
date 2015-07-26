@@ -8,9 +8,19 @@ angular.module('hyq', [
     // Ionic Core
     'ionic',
 
+    // Module config
+    'hyq.feed',
+    'hyq.application',
+    'hyq.friend',
+    'hyq.user',
+
+    // Common Module
+    'common.service',
+    'common.filter',
+    'common.directive',
+
     //
-    'hyq.controllers',
-    'hyq.services'
+    'hyq.controllers'
 ])
 
 .run(['$ionicPlatform', function($ionicPlatform) {
@@ -39,6 +49,7 @@ angular.module('hyq', [
     $ionicConfigProvider.navBar.alignTitle('center');               // 标题的位置
     $ionicConfigProvider.navBar.positionPrimaryButtons('left');     // 主要操作按钮的位置
     $ionicConfigProvider.navBar.positionSecondaryButtons('right');  // 次要操作按钮的位置
+    $ionicConfigProvider.views.maxCache(0);
 
     $stateProvider
 
@@ -56,8 +67,7 @@ angular.module('hyq', [
         url: '/feed',
         views: {
             'tab-feed': {
-                templateUrl: 'templates/tab-feed.html',
-                controller: 'FeedCtrl'
+                templateUrl: 'templates/tab-feed.html'
             }
         }
     })
@@ -69,7 +79,7 @@ angular.module('hyq', [
         views: {
             'tab-application': {
                 templateUrl: 'templates/tab-application.html',
-                controller: 'ApplicationCtrl'
+                abstract: true
             }
         }
     })
@@ -81,7 +91,7 @@ angular.module('hyq', [
         views: {
             'tab-friend': {
                 templateUrl: 'templates/tab-friend.html',
-                controller: 'FriendCtrl'
+                abstract: true
             }
         }
     })
@@ -93,7 +103,7 @@ angular.module('hyq', [
         views: {
             'tab-user': {
                 templateUrl: 'templates/tab-user.html',
-                controller: 'UserCtrl'
+                abstract: true
             }
         }
     });
