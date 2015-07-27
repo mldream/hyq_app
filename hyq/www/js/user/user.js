@@ -2,6 +2,9 @@
  * Created by baohao on 15/7/25.
  */
 angular.module('hyq.user', [
+
+    'hyq.user.setting',
+
     'hyq.user.controller'
 ])
 
@@ -30,7 +33,7 @@ angular.module('hyq.user', [
             .state('hyq.user.setting', {
                 url: '/setting',
                 templateUrl: 'templates/user/user-setting.html',
-                controller: 'UserSettingCtrl'
+                abstract: true
             });
 
     }]);

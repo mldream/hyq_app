@@ -6,43 +6,43 @@
         </ion-refresher>
 
         <ion-list>
-        <div class="list card" ng-repeat="item in [1, 2, 3, 4, 5, 6]">
+            <div class="card" ng-repeat="item in [1, 2, 3, 4, 5, 6]">
 
-            <div class="item item-avatar">
-                <img src="https://uimg-oklink-com.alikunlun.com/4@150w_150h_1e_1o_1wh_1pr.jpg">
-                <h2>Marty McFly</h2>
-                <p>November 05, 1955</p>
+                <div class="item item-avatar">
+                    <img src="https://uimg-oklink-com.alikunlun.com/4@150w_150h_1e_1o_1wh_1pr.jpg">
+                    <h2>Marty McFly</h2>
+                    <p>November 05, 1955</p>
+                </div>
+
+                <div class="item item-body">
+                    <img class="full-image" ng-src="https://uimg-oklink-com.alikunlun.com/feed_feeds_v3-0{{item}}.jpg@1393w_1371h_1e_1o_1wh.jpg?version=0">
+                    <p>
+                        This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                        the content is from a card-body consisting of an image and paragraph text. The footer
+                        consists of tabs, icons aligned left, within the card-footer.
+                    </p>
+                    <p>
+                        <a href="#" class="subdued">1 Like</a>
+                        <a href="#" class="subdued">5 Comments</a>
+                    </p>
+                </div>
+
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-thumbsup"></i>
+                        Like
+                    </a>
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-chatbox"></i>
+                        Comment
+                    </a>
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-share"></i>
+                        Share
+                    </a>
+                </div>
+
             </div>
-
-            <div class="item item-body">
-                <img class="full-image" ng-src="https://uimg-oklink-com.alikunlun.com/feed_feeds_v3-0{{item}}.jpg@1393w_1371h_1e_1o_1wh.jpg?version=0">
-                <p>
-                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                    the content is from a card-body consisting of an image and paragraph text. The footer
-                    consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
-                </p>
-            </div>
-
-            <div class="item tabs tabs-secondary tabs-icon-left">
-                <a class="tab-item" href="#">
-                    <i class="icon ion-thumbsup"></i>
-                    Like
-                </a>
-                <a class="tab-item" href="#">
-                    <i class="icon ion-chatbox"></i>
-                    Comment
-                </a>
-                <a class="tab-item" href="#">
-                    <i class="icon ion-share"></i>
-                    Share
-                </a>
-            </div>
-
-        </div>
-            </ion-list>
+        </ion-list>
     </ion-content>
 </ion-view>

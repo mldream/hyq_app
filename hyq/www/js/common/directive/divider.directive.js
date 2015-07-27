@@ -5,6 +5,8 @@ angular.module('divider.directive', [
     'tool.service'
 ])
 
+    // Auto List Divider
+
     .directive('autoListDivider', ['$timeout', 'toolService', function($timeout, toolService) {
         // 默认的Divide取值方法
         var defaultDivideFunction = function(item) {
@@ -41,6 +43,33 @@ angular.module('divider.directive', [
 
         return {
             distract: 'A',
+            link: linkFn
+        };
+    }])
+
+    // Auto List Lookup
+
+    .directive('autoListLookup', ['$timeout', function($timeout) {
+        var defaultFunction = function() {
+
+        };
+        var defaultLookupIndexFunction = function() {
+            var array = [];
+            for(var i='A'; i <= 'Z'; i++) {
+                array.push(i);
+            }
+            return array;
+        };
+        var defaultLookupElementTpl = '<div id="autoListLookup" style="">A</div>';
+
+        var linkFn = function(scope, element, attrs) {
+            var lookupIndex = defaultLookupIndexFunction();
+
+
+        };
+
+        return {
+            distract: 'E',
             link: linkFn
         };
     }]);

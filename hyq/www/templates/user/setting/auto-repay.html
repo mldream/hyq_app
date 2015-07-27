@@ -1,0 +1,27 @@
+<ion-view view-title="自动还款设置" class="stable-bg">
+    <ion-content>
+        <ion-list>
+
+            <ion-item class="item-divider"></ion-item>
+            <ion-radio ng-model="options.choice"
+                       icon="ion-android-done"
+                       ng-disabled="false"
+                       ng-value="true">
+                开
+            </ion-radio>
+            <ion-radio ng-model="options.choice"
+                       icon="ion-android-done"
+                       ng-disabled="false"
+                       ng-value="false">
+                关
+            </ion-radio>
+
+            <div class="padding">
+                <p>
+                    开启自动还款后，若您的账户余额足够，系统将在当期借款到期日之前，自动帮你归还当期应还借款。
+                </p>
+            </div>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

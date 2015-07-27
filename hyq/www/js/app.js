@@ -23,7 +23,7 @@ angular.module('hyq', [
     'hyq.controllers'
 ])
 
-.run(['$ionicPlatform', function($ionicPlatform) {
+.run(['$ionicPlatform', '$rootScope', '$state', function($ionicPlatform, $rootScope, $state) {
 
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -39,9 +39,21 @@ angular.module('hyq', [
         }
     });
 
+    $rootScope.hideTabs = false;
+    $rootScope.$on('$ionicView.beforeEnter', function() {
+        var stateName = $state.current.name;
+        var hideTabs = true;
+        if(stateName == 'hyq.user.index' || stateName == 'hyq.feed.index'
+            || stateName == 'hyq.application.index' || stateName == 'hyq.friend.index') {
+            hideTabs = false;
+        }
+        $rootScope.hideTabs = hideTabs;
+    });
+
 }])
 
-.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider',
+    function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $state) {
 
     // 配置Android 和 IOS 系统的样式一致性
     $ionicConfigProvider.tabs.style('standard');                    // Tab的风格
