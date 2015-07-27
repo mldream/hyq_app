@@ -11,7 +11,7 @@ angular.module('divider.directive', [
             return toolService.toPinyin(item.slice(0, 1)).toString().toUpperCase();
         };
         // 默认的Divide模版
-        var defaultDivideElementTpl = '<div class="item item-divider">${divider}</div>';
+        var defaultDivideElementTpl = '<div class="item item-divider" id="${id}">${divider}</div>';
 
         var lastDivider = '';
 
@@ -26,7 +26,7 @@ angular.module('divider.directive', [
                 var divider = divideFunction(key);
 
                 if(divider != lastDivider) {
-                    var elementHtml = divideElementTpl.replace('${divider}', divider);
+                    var elementHtml = divideElementTpl.replace('${divider}', divider).replace('${id}', Math.random()+'_divider');
                     var divideElement = angular.element(elementHtml);
 
                     var parentNodeElement = element[0].parentNode;

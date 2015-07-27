@@ -109,6 +109,6 @@ angular.module('hyq', [
     });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/hyq/feed');
+    $urlRouterProvider.otherwise('/hyq/feed/index');
 
 }]);
