@@ -61,7 +61,9 @@ angular.module('hyq', [
     $ionicConfigProvider.navBar.alignTitle('center');               // 标题的位置
     $ionicConfigProvider.navBar.positionPrimaryButtons('left');     // 主要操作按钮的位置
     $ionicConfigProvider.navBar.positionSecondaryButtons('right');  // 次要操作按钮的位置
-    $ionicConfigProvider.views.maxCache(0);
+    $ionicConfigProvider.form.toggle('large');
+    $ionicConfigProvider.spinner.icon('ios');
+    //$ionicConfigProvider.views.maxCache(0);
 
     $stateProvider
 
