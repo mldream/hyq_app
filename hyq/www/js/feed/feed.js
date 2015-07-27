@@ -14,7 +14,7 @@ angular.module('hyq.feed', [])
             .state('hyq.feed.index', {
                 url: '/index',
                 templateUrl: 'templates/feed/feed-index.html',
-                controller: 'UserSettingCtrl'
+                controller: 'FeedCtrl'
             });
 
     }]);

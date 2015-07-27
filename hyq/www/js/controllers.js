@@ -2,7 +2,13 @@ angular.module('hyq.controllers', [
     'hyq.services'
 ])
 
-    .controller('FeedCtrl', function($scope) {})
+    .controller('FeedCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+        $scope.doRefresh = function() {
+            $timeout(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            }, 2000);
+        };
+    }])
 
     .controller('FriendCtrl', ['$scope', 'Friends', 'collectionService', 'toolService',
         function($scope, Friends, collectionService, toolService) {
