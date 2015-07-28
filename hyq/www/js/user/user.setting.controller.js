@@ -9,4 +9,12 @@ UserSettingControllerModule
 
     .controller('AutoRepayCtrl', ['$scope', function($scope) {
 
+    }])
+
+    .controller('UpdateLoginPasswordCtrl', ['$scope', function($scope) {
+
+    }])
+
+    .controller('UpdateTradePasswordCtrl', ['$scope', function($scope) {
+
     }]);

@@ -4,16 +4,17 @@
 
             <!-- 第一节 -->
             <ion-item class="item-divider"></ion-item>
-            <ion-item class="item-icon-right">
+            <ion-item class="item-icon-right" ui-sref="hyq.user.setting.update-login-password">
                 <h2>修改登录密码</h2>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
-            <ion-item class="item-icon-right">
+            <ion-item class="item-icon-right" ui-sref="hyq.user.setting.update-trade-password">
                 <h2>修改支付密码</h2>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
             <ion-item class="item-icon-right" ui-sref="hyq.user.setting.free-password">
                 <h2>小额免密</h2>
+                <span class="badge">开</span>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
 
@@ -21,6 +22,7 @@
             <ion-item class="item-divider"></ion-item>
             <ion-item class="item-icon-right" ui-sref="hyq.user.setting.auto-repay">
                 <h2>自动还款</h2>
+                <span class="badge">关</span>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
 
@@ -36,11 +38,15 @@
             </ion-item>
 
             <!--<ion-item class="item-divider light"></ion-item>-->
-            <div class="padding"><div class="padding"><div class="padding">
-                <button class="button button-block button-assertive">
-                    退出当前账户
-                </button>
-            </div></div></div>
+            <div class="padding">
+                <div class="padding">
+                    <div class="padding">
+                        <button class="button button-block button-assertive">
+                            退出当前账户
+                        </button>
+                    </div>
+                </div>
+            </div>
 
         </ion-list>
     </ion-content>

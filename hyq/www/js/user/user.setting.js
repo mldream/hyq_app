@@ -17,6 +17,22 @@ angular.module('hyq.user.setting', [
                 controller: 'UserSettingCtrl'
             })
 
+            // 修改登录密码 - user.setting.update-login-password
+
+            .state('hyq.user.setting.update-login-password', {
+                url: '/update-login-password',
+                templateUrl: 'templates/user/setting/update-login-password.html',
+                controller: 'UpdateLoginPasswordCtrl'
+            })
+
+            // 修改支付密码 - user.setting.update-trade-password
+
+            .state('hyq.user.setting.update-trade-password', {
+                url: '/update-trade-password',
+                templateUrl: 'templates/user/setting/update-trade-password.html',
+                controller: 'UpdateTradePasswordCtrl'
+            })
+
             // 自动还款设置 － user.setting.autoRepay
 
             .state('hyq.user.setting.auto-repay', {
@@ -25,7 +41,7 @@ angular.module('hyq.user.setting', [
                 controller: 'AutoRepayCtrl'
             })
 
-            // 设置 － user.setting
+            // 小额免密设置 － user.setting.free-password
 
             .state('hyq.user.setting.free-password', {
                 url: '/free-password',
